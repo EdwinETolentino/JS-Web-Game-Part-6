@@ -4,6 +4,8 @@ function newNonPlayableCharacter(x, y) {
     
     let direction = null;
 
+    
+    
     function moveCharacter() {
         if (direction === 'west') {
             x -= 1
@@ -57,3 +59,10 @@ function newNonPlayableCharacter(x, y) {
         stop: stop
     }
 }
+npc.walkNorth(1400)
+    .then(() => npc.walkEast(1200))
+    .then(() => npc.walkSouth(300))
+    .then(() => npc.walkEast(1500))
+    .then(() => npc.walkSouth(1500))
+    .then(() => npc.walkWest(2700))
+    .then(() => npc.walkNorth(400))
